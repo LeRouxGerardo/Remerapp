@@ -55,10 +55,18 @@ const Producto = [
     }
   ]
 
+  export const getProducto = () => {
+    return new  Promise((resolve) => {
+        setTimeout(() => {
+            resolve(Producto)
+        }, 2000)
+    })
+  }
+
   export const getProductoById = (ProductoId) => {
     return new  Promise((resolve) => {
         setTimeout(() => {
             resolve(Producto.find(prod => prod.id === ProductoId))
-        }, 500)
+        }, 2000)
     })
   }
