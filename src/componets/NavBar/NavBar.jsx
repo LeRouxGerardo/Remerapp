@@ -7,7 +7,7 @@ const NavBar = () => {
                 <button>Bandas</button>
                 <button>Juegos</button>
                 <button>Deportivas</button>
-                <button>Series</button>
+                <button>Series/Peliculas</button>
                 <button>Personalizadas</button>
             </div>
             <CartWidget />

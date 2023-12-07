@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer greeting={'Bienvenidos'}/>
-      <ItemCount initial={1} stock={10} onAdd={(compraQ) => console.log('Cantidad agregada ',compraQ)}/>
       <ItemDetailContainer />
+      {/* <ItemCount initial={1} stock={10} onAdd={(compraQ) => console.log('Cantidad agregada ',compraQ)}/> */}
     </div>
   );
 }
