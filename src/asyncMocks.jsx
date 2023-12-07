@@ -200,17 +200,27 @@ const Producto = [
   ]
 
   export const getProducto = () => {
-    return new  Promise((resolve) => {
-        setTimeout(() => {
-            resolve(Producto)
-        }, 2000)
-    })
-  }
+    return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve(Producto)
+      }, 2000)
+  })
+}
 
-  export const getProductoById = (ProductoId) => {
+export const getProductoById = (ProductoId) => {
     return new  Promise((resolve) => {
         setTimeout(() => {
             resolve(Producto.find(prod => prod.id === ProductoId))
         }, 2000)
     })
   }
+
+
+export const getProductoByCategory = (categoryId) => {
+  return new  Promise((resolve) => {
+      setTimeout(() => {
+          resolve(Producto.filter(prod=> prod.categoria === categoryId))
+      }, 2000)
+  })
+}
+
