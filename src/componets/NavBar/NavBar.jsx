@@ -9,7 +9,7 @@ const NavBar = () => {
                 <h3>Remerapp</h3>
             </Link>
             
-            <div className='Categories'>
+            <div className='Categorias'>
                 <button><NavLink to={`/category/Bandas`} className={({ isActive}) => isActive ? 'ActiveOption' : 'option'}>Bandas</NavLink></button>
                 <button><NavLink to={`/category/Juegos`} className={({ isActive}) => isActive ? 'ActiveOption' : 'option'}>Juegos</NavLink></button>
                 <button><NavLink to={`/category/Deportiva`} className={({ isActive}) => isActive ? 'ActiveOption' : 'option'}>Deportivas</NavLink></button>
