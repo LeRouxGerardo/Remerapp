@@ -1,0 +1,22 @@
+.Checkout {
+    background-color: black;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.botonVaciar{
+    background-color: rgb(134, 103, 103);
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.cerrarPedido h3{
+    font-size: 25px;
+
+}

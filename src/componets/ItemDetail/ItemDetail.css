@@ -1,0 +1,21 @@
+.CardItem{
+    display: flex;
+}
+
+.ItemHeader{
+    font-size: 30px;
+    padding: 25px;
+    margin: 25px;
+}
+
+.ItemImg{
+    max-width: 200px;
+}
+
+.Option{
+  background-color: rgba(18, 165, 97, 0.603);
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+}

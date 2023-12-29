@@ -1,0 +1,19 @@
+.NavBar h1{
+   font-size: 50px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.Categorias{
+ font-size: 25px;
+ border-bottom: solid 2px rgba(0, 0, 0, 0.226);
+ display: flex;
+ padding: 20px;
+ justify-content: space-between;
+}
+
+.botonNav:hover{
+
+    font-weight: bold;
+    
+}

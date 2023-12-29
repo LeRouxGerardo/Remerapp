@@ -1,26 +1,44 @@
+import './ItemDetailContainer.css';
 import { useState, useEffect } from 'react'
-import { getProductoById } from '../../asyncMocks'
+
 import ItemDetail from '../ItemDetail/ItemDetail'
+
+import { db } from '../../services/firebase/firebaseConfig'
+import { getDoc, doc } from 'firebase/firestore'
+
 import { useParams} from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-    const [Producto, setProducto] = useState(null)
+    const [product, setProduct] = useState(null)
+    const [loading, setLoading ] = useState(true) 
     const { itemId } = useParams()
-    useEffect(() => {
-        getProductoById(itemId)
-        .then(response => {
-            setProducto(response)
-        })
-        .catch(error=> {
-            console.error(error)
-        })
-    }, [itemId])
+   
 
+    useEffect(() => {
+         setLoading(true) 
+        
+        const docRef = doc(db, 'BaseRemerapp', itemId)
+
+        getDoc(docRef)
+            .then(response => {
+                const data= response.data()
+                const productsAdapted = { id: response.id, ...data}
+                setProduct(productsAdapted)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            }) 
+    }, [itemId]); 
+    
     return(
         <div className='ItemDetailContainer'>
-            <ItemDetail {...Producto}/>
+            <ItemDetail {...product}/>
         </div>
     )
-}
+} 
+
 
 export default ItemDetailContainer

@@ -1,4 +1,5 @@
-import { useState } from 'react' 
+import { useState } from 'react';
+import './ItemCount.css';
 
 const ItemCount = ({stock,  initial, onAdd})=> {
     const [compraQ, setCompra] = useState(initial)
@@ -18,12 +19,12 @@ const ItemCount = ({stock,  initial, onAdd})=> {
     return(
         <div className='Contador'>
             <div className='Controles'>
-                <button className="boton" onClick={decrement}>-</button>
+                <button className="botonMas" onClick={decrement}>-</button>
                 <h4 className="numero">{compraQ}</h4>
-                <button className="boton" onClick={increment}>+</button>
+                <button className="botonMenos" onClick={increment}>+</button>
             </div>
             <div>
-                 <button className="boton" onClick={() => onAdd(compraQ)} disabled={!stock}>
+                 <button className="botonContador" onClick={() => onAdd(compraQ)} disabled={!stock}>
                     Agregar al Pedido
                  </button>
             </div>

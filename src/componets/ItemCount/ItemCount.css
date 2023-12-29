@@ -1,0 +1,26 @@
+.Controles{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.Controles button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.Controles h4{
+    font-size: 25px;
+}
+
+.botonContador{
+    background-color: rgba(18, 165, 97, 0.603);
+    padding: 10px;
+    border-radius: 15px;
+}

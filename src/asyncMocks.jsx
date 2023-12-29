@@ -198,7 +198,9 @@ const producto = [
       descripcion: "Remera Personalizada con tu logo, frase o imagen"
     }
   ]
-
+  const productoJSON = JSON.stringify(producto);
+  console.log(productoJSON);
+  
   export const getProducto = () => {
     return new Promise((resolve) => {
       setTimeout(() => {

@@ -1,0 +1,20 @@
+.CardItem{
+    border: solid 1px rgba(0, 0, 0, 0.137);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.ItemImg{
+    width: 150px;
+    padding: 20px;
+}
+
+.ItemFooter button{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 25px;
+    color: aliceblue;
+    font-weight: bold;
+}

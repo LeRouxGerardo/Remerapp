@@ -1,3 +1,4 @@
+import './Cart.css';
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import CartItem from '../CartItem/CartItem'
@@ -16,11 +17,11 @@ const Cart = () => {
     }
 
     return (
-        <div>
+        <div className='cerrarPedido'>
             { cart.map(p => <CartItem key={p.id} {...p}/>)}
             <h3>Total: ${total}</h3>
-            <button onClick={() => clearCart()} className="Button">Vaciar pedido</button>
-            <Link to='/checkout' className='Option'>Checkout</Link>
+            <button onClick={() => clearCart()} className="botonVaciar">Vaciar pedido</button>
+            <Link to='/checkout' className='Checkout'>Cerrar Sesión</Link>
         </div>
     )   
 }
