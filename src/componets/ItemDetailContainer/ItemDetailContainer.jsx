@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
          setLoading(true) 
         
-        const docRef = doc(db, 'BaseRemerapp', itemId)
+        const docRef = doc(db, 'Remerapp', itemId)
 
         getDoc(docRef)
             .then(response => {

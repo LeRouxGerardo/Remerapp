@@ -21,16 +21,24 @@ const removeItem = (itemId) => {
     setCart(cartUpdated)
 }
 
+const precioTotal = () => {
+    return cart.reduce((acc, prod) => acc + prod.precio * prod.quantity, 0);
+}
 const clearCart = () => {
     setCart([])
 }
+
+const cantidadTotal  = () => {
+    return cart.reduce((acc, prod) => acc + prod.cantidad, 0);
+}
+
 
 const isInCart = (itemId) => {
     return cart.some(prod => prod.id === itemId)
 }
 
 return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, precioTotal, cantidadTotal }}>
         { children }
     </CartContext.Provider>
 )
